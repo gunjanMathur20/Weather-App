@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: rgb(38, 37, 37);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 1000px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Search */
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#input-box {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+#input-box::placeholder {
+  color: #ddd;
+}
+
+#search-btn {
+  padding: 10px 25px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background: #929495;
+}
+
+/* Weather Info */
+.weather-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 30px;
+}
+
+.weather-image img {
+  width: 200px;
+}
+
+.weather-info {
+  text-align: right;
+  line-height: 30px;
+}
+
+.weather-info h2 {
+  font-size: 32px;
+}
+
+.temp {
+  font-size: 18px; 
+  font-weight: normal;
+  color: #fff;
+}
+
+.temp .value {
+  font-size: 20px; 
+  font-weight: bold;
+  color: #ddd;
+  padding-left: 7px;
+}
+
+.temp sup {
+  font-size: 12px; 
+}
+
+#description {
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* Info Boxes */
+.sunrise-sunset,
+.humidity-wind {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  flex: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.box img {
+  width: 40px;
+  height: 40px;
+}
+
+.box p {
+  font-size: 14px;
+}
+
+/* Error Message */
+.location-not-found {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.location-not-found h2 {
+  color: #ffb3b3;
+}
+
+.location-not-found img {
+  width: 180px;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .weather-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .search-row {
+    flex-direction: column;
+  }
+
+  .sunrise-sunset,
+  .humidity-wind {
+    flex-direction: column;
+  }
+}

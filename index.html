@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+    <!-- ==== Main Container ====== -->
+    <div class="container">
+
+        <!-- ==== Top Section COntain Input box And Search box ==== -->
+        <div class="top-container">
+            <div class="search-row">
+                <!-- Search Bar -->
+                <input type="text" placeholder="Enter City Name..." id="input-box">
+                <!-- Search Button -->
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+
+
+        <!-- ===== Container for Display Weather Details ======= -->
+
+        <div id="weather-data">
+
+            <div class="weather-top">
+                <!-- Show Weather image -->
+                <div class="weather-image">
+                    <img src="images/clouds.png" alt="Weather Image" id="weather-img">
+                     <!-- <img src="" alt="Weather Image" id="weather-img">  -->
+                </div>
+
+                <div class="weather-info">
+                    <!-- Box for City Name -->
+                    <h2 id="city-name">City Name</h2>
+                    <!-- show temperature -->
+                    <p class="temp" id="temp-value">
+                        Temperature <span class="value">0<sup>°C</sup></span>
+                    </p>
+
+                    <p class="temp" id="feels-like">
+                        Feels Like <span class="value">0<sup>°C</sup></span>
+                    </p>
+                    <!-- show description -->
+                    <p id="description">Clear Sky</p>
+                </div>
+            </div>
+
+            <!-- Show Weather Conditions  -->
+            <div class="weather-conditions">
+
+                <!-- Display Weather information like -: Wind Speed, Humidity, Sunrise, Sunset,  -->
+                <!-- Show Sunrise And Sunset -->
+                <div class="sunrise-sunset">
+                    <div class="box">
+                        <img src="images/sunrise.png" alt="Sunrise">
+                        <p><span id="sunrise-time">06:00 AM</span><br>Sunrise</p>
+                    </div>
+                    <div class="box">
+                        <img src="images/sunset.png" alt="Sunset">
+                        <p><span id="sunset-time">06:45 PM</span><br>Sunset</p>
+                    </div>
+                </div>
+
+                <!-- Humidity / Wind Speed -->
+                <div class="humidity-wind">
+                    <div class="box">
+                        <img src="images/humidity.png" alt="Humidity">
+                        <p><span id="humidity-value">45%</span><br>Humidity</p>
+                    </div>
+                    <div class="box">
+                        <img src="images/wind.png" alt="Wind">
+                        <p><span id="wind-speed">12 km/h</span><br>Wind Speed</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== Section for Display Error Message if City / Location not found ====== -->
+        <div class="location-not-found">
+            <h1>Sorry😔, Location not found!!!</h1>
+            <img src="images/errorimage.png" alt="404 Error">
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
